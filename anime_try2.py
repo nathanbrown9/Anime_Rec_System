@@ -190,16 +190,7 @@ def similar_users(user_id, matrix, k=5):
     return [u[0] for u in sorted_users]
 
 def display_top_watched_shows(user_id, similar_user_indices, matrix, anime_data, top_n=10):
-    """
-    Display the top-rated shows watched by both the similar users and the intended user.
-
-    Parameters:
-    - user_id: ID of the intended user
-    - similar_user_indices: List of IDs of similar users
-    - matrix: User-item rating matrix
-    - anime_data: DataFrame containing anime information
-    - top_n: Number of top-rated shows to display
-    """
+   
     # User's watched anime
     user_ratings = matrix.loc[user_id]
     user_watched = user_ratings[user_ratings > 0]
